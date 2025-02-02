@@ -34,5 +34,3 @@ user.greeting2 = function () {
 };
 console.log(user.greeting());
 console.log(user.greeting2());
-
-//4:03 last
