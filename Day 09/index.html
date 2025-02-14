@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="laptop" src="ales-nesetril-Im7lZjxeLhg-unsplash.jpg" alt="Laptop Wallpaper" ></li>
+            <li><img width="200px" id="night" src="jonatan-pie-h8nxGssjQXs-unsplash.jpg" alt="Stars Night"></li>
+            <li><img width="200px" id="sunset" src="elliott-engelmann-DjlKxYFJlTc-unsplash.jpg" alt="Sunset"></li>
+            <li><img width="200px" id="jungle" src="rosie-sun-1L71sPT5XKc-unsplash.jpg" alt="Jungle" ></li>
+            <li style="color: aliceblue;"><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('jungle').onclick = function() {
+    //     alert('Jungle');
+    // }
+
+     //attachEvent()
+    //jQuery - on
+
+    //type, timeStamp, defaultPrevented
+    // target, twoElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    //altkey,ctrlkey, shiftkey, keyCode    
+
+    // document.getElementById('images').addEventListener('click', function(e) {
+    //     console.log("ul CLicked");
+    // },false);
+
+    // document.getElementById('jungle').addEventListener('click', function(e) {
+    //     console.log("Jungle picture Clicked");
+    //     e.stopPropagation();
+    // },false);
+
+    // document.getElementById('google').addEventListener('click', function(e) {
+    //     console.log("Google Clicked");
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    // });
+
+    document.querySelector('#images').addEventListener('click', function(e) {
+        // console.log(e.target.parentNode);
+
+        // console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            let removeItem = e.target.parentNode;
+            removeItem.remove()
+
+        } 
+        // removeItem.parentNode.removeChild(removeItem)
+    });
+</script>
+</html>
