@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Learning JavaScript from YouTube</h1>
+    <button id="start" style="padding: 10px 30px; color: #fff; background-color: rgba(12, 205, 12, 0.786); font-size: 20px; ">Start</button>
+    <button id="stop" style="padding: 10px 30px; color: #fff; background-color: rgba(193, 3, 3, 0.937); font-size: 20px; ">Stop</button>
+</body>
+<script>
+    
+    const sayDate = function() {
+    console.log(Date.now());
+    } 
+
+    let interval; 
+    document.querySelector('#start').addEventListener('click', function() {
+        if (!interval) {
+            interval = setInterval(sayDate,1000);  
+        }
+    });
+    document.querySelector('#stop').addEventListener('click', function() {
+        const stop = clearInterval(interval);
+        interval = null;
+    });
+</script>
+</html>

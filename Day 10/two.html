@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Day 10</h1>
+    <button id="stop" style="padding: 10px 30px; color: #fff; background-color: rgba(0, 128, 0, 0.751); font-size: 20px; ">Stop</button>
+</body>
+<script>
+    const msg = function(){
+        console.log("Deepak Bhatt")
+    }
+    const newH1 = function() {
+        document.querySelector('h1').innerHTML = "It's changed text"
+    }
+    const tim = setTimeout(newH1, 2000);
+    
+    //Stop timer using button
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearTimeout(tim);
+        console.log("Timer Stopped")
+    })
+</script>
+</html>
