@@ -26,6 +26,3 @@ const userOne = new User("deepak", 12, true);
 const userTwo = new User("Khushi", 10, false);
 console.log(userOne);
 console.log(userTwo);
-
-
-// 7:11 timestamp
